@@ -1,7 +1,6 @@
 from datetime import datetime
 
 def validate_return(customer_name, product_name, purchase_date):
-    # Predefined purchase records (CASE-SENSITIVE)
     records = {
         ("Alex", "Wireless Mouse"): "$25.99",
         ("Sarah", "Laptop Stand"): "$45.50",
@@ -10,13 +9,12 @@ def validate_return(customer_name, product_name, purchase_date):
 
     key = (customer_name, product_name)
 
-    # ❌ Customer-product not found
+    # Not purchased
     if key not in records:
         print("You have not purchased that product recently with us.")
         print("Thank you.")
         return
 
-    # Parse purchase date
     try:
         purchase_dt = datetime.strptime(purchase_date, "%m/%d/%y").date()
     except ValueError:
@@ -24,12 +22,9 @@ def validate_return(customer_name, product_name, purchase_date):
         print("Thank you.")
         return
 
-    # Current system date (mocked in tests)
     current_date = datetime.now().date()
-
     days_diff = (current_date - purchase_dt).days
 
-    # ✅ Within 7 days
     if days_diff <= 7:
         price = records[key]
         print(
