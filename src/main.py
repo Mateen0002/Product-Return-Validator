@@ -1,6 +1,5 @@
 from return_validator import validate_return
 
-
 def validate_product_return():
     print("Please enter the details to return the product.")
 
