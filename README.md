@@ -1,2 +1,32 @@
 # Product-Return-Validator
-Python-based e-commerce return validation system that checks customer return eligibility using purchase history and a 7-day return policy. Built using modular design, datetime operations, and test-driven development.
+
+
+---
+
+## Technologies Used
+- Python 3
+- datetime module
+- unittest (mocking & patching)
+- Git & GitHub
+
+---
+
+## How It Works
+1. User enters name, product, and purchase date
+2. System validates purchase record
+3. Return eligibility is checked against 7-day policy
+4. Appropriate message is displayed
+
+---
+
+## Sample Output
+
+
+
+---
+
+## Author
+**Mateen Ajmat**  
+Computer Science (AIML)  
+Aspiring Data Analyst / Python Developer
+
